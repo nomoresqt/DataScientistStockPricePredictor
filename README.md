@@ -11,3 +11,4 @@ In this project, I’m using LSTM model to predict stocks/ asset price a day in 
 
 LSTMs are extremely effective tool for sequence prediction problems. Since LTSM has feedback connection, it’s good at processing sequential of data, such as : historical stock prices. 
 
+https://lululastudio.com/stockpricepredictor/2021/12/28/stock-price-predictor-udacity-data-scientist-capstone-project
