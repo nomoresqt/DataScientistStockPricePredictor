@@ -31,3 +31,7 @@ Yahoo Finance API, downloaded via yfiance library
 Note: Yahoo has deprecated their API, but you can still download data via yfinance 
 yfinance documentation: https://pypi.org/project/yfinance/
 
+### In this Repository 
+
+* a Jupiternotebook file which contians all the code
+* 
