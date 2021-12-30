@@ -24,3 +24,10 @@ https://lululastudio.com/stockpricepredictor/2021/12/28/stock-price-predictor-ud
 * math 
 * sklearn
 * tensorflow 
+
+### Data Source 
+
+Yahoo Finance API, downloaded via yfiance library 
+Note: Yahoo has deprecated their API, but you can still download data via yfinance 
+yfinance documentation: https://pypi.org/project/yfinance/
+
