@@ -1,4 +1,4 @@
-# Udacity Data Scientist Capston Project Stock Predictor
+# Data Scientist Capston Project Stock Predictor
 
 
 This project is the capstone project of Udacity Data Scientist nano-degree. For this project, I built a model to predict stock prices. 
