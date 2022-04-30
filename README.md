@@ -1,15 +1,10 @@
 # Data Scientist Capston Project Stock Predictor
 
+###
+This project is the capstone project of Udacity Data Scientist nano-degree. For this project, I built a model to predict financial assets  prices(stock, ETF, Digital currency .etc). My personal professional background is in Finance and Investments. One of the reasons why I’m learning Data Science is to utility this powerful tool in the financial sector. The modern  Financial sectors consumers and generate enormous amount of date on daily basis. More than 90% of the daily trading volume of the major stock exchanges are conducted by computer program and algorithms. Machine learning and deep learning have become an essential tool for automate complicated trading decision making and trade execution process.  
 
-This project is the capstone project of Udacity Data Scientist nano-degree. For this project, I built a model to predict stock prices. 
+In this project, I’m using LSTM model to predict stocks/ asset price a day in the future. Long short-term memory model( LSTM) is a RNN ( Recurrent Neural Networks) architecture. How RNNs works are analogous to the learning process of humans, just like us, it remembers some useful information from the past (feedback connection) and forget some none important information. RNNs can only loop back and get previous information from the recent timeframe,  but LSTMs can retains past information from the longer timeframe. Thus, LSTMs are extremely effective tool for sequence prediction problems. Since LTSM has feedback connection, it’s good at processing sequential of  historical data, such as : historical financial asset prices.
 
-My personal professional background is in Finance and Investments. One of the reasons why I’m learning Data Science is to utility this powerful tool in the financial sector. The modern  
-
-Financial sectors consumers and generate enormous amount of date on daily basis. More than 90% of the daily trading volume of the major stock exchanges are conducted by computer program and algorithms. Machine learning and deep learning has become an essential tool for automate complicated trading decision making and trade execution process.  
-
-In this project, I’m using LSTM model to predict stocks/ asset price a day in the future. Long short-term memory model( LSTM) is a RNN ( Recurrent Neural Network) architecture.
-
-LSTMs are extremely effective tool for sequence prediction problems. Since LTSM has feedback connection, it’s good at processing sequential of data, such as : historical stock prices. 
 
 ### The Blog Post of this project can be found via the following link
 https://lululastudio.com/stockpricepredictor/2021/12/28/stock-price-predictor-udacity-data-scientist-capstone-project
