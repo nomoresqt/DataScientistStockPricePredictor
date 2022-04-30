@@ -1,4 +1,4 @@
-# Data Scientist Capston Project Stock Predictor
+# Data Scientist Capston Project Financial Asset price Predictor
 
 ###
 This project is the capstone project of Udacity Data Scientist nano-degree. For this project, I built a model to predict financial assets  prices(stock, ETF, Digital currency .etc). My personal professional background is in Finance and Investments. One of the reasons why I’m learning Data Science is to utility this powerful tool in the financial sector. The modern  Financial sectors consumers and generate enormous amount of date on daily basis. More than 90% of the daily trading volume of the major stock exchanges are conducted by computer program and algorithms. Machine learning and deep learning have become an essential tool for automate complicated trading decision making and trade execution process.  
@@ -31,6 +31,8 @@ yfinance documentation: https://pypi.org/project/yfinance/
 * a Jupiternotebook file which contians all the code
 * model.h5: trained model 
 * model_updated.h5: updated model after adding 50 more neurons
+* downloaded_data.csv: the orignal dataset that I've downloaded via yfinance
+* final_prediction.csv: the final dataset that contians model prediction
 
 ### Sections in this project 
 
