@@ -1,13 +1,20 @@
 # Data Scientist Capston Project Financial Asset price Predictor
 
 ###
-This project is the capstone project of Udacity Data Scientist nano-degree. For this project, I built a model to predict financial assets  prices(stock, ETF, Digital currency .etc). My personal professional background is in Finance and Investments. One of the reasons why I’m learning Data Science is to utility this powerful tool in the financial sector. The modern  Financial sectors consumers and generate enormous amount of date on daily basis. More than 90% of the daily trading volume of the major stock exchanges are conducted by computer program and algorithms. Machine learning and deep learning have become an essential tool for automate complicated trading decision making and trade execution process.  
-
-In this project, I’m using LSTM model to predict stocks/ asset price a day in the future. Long short-term memory model( LSTM) is a RNN ( Recurrent Neural Networks) architecture. How RNNs works are analogous to the learning process of humans, just like us, it remembers some useful information from the past (feedback connection) and forget some none important information. RNNs can only loop back and get previous information from the recent timeframe,  but LSTMs can retains past information from the longer timeframe. Thus, LSTMs are extremely effective tool for sequence prediction problems. Since LTSM has feedback connection, it’s good at processing sequential of  historical data, such as : historical financial asset prices.
-
+1.1. Project Overview
+The modern financial market consumers and generates enormous amount of data on the daily basis. More than 50%-70 of the daily trading volume of the major stock exchanges are conducted by computer programs and algorithms. Machine learning and deep learning have become an essential tool for automate complicated trading decision making and trade execution process. Many financial institutions and professional trader are using the ML and AI to create models that consume real-time data as input and rank stocks or other financial instruments and identify profitable trading and investment opportunities
+In this project, I will use Long-Short Term Model (LSTM) to predict financial assets prices by using historical time series data (historical prices) to build and train the model. All dataset of this project were download by using the library Yfinance. Yfinance is a library that download financial data via Yahoo API, even though Yahoo has deprecated its’ old API, yfinance can still download without any issues. With this library, users can download End-Of-Day(daily) price or intraday prices of different interval such as: 1 hour and 15 minutes. For more information, please visit yfinance homepage https://pypi.org/project/yfinance/
+The dataset contains 6 columns, and the timestamp as the index
+Open,: the price at the open of a trading day
+2. Close: the price at the close of a trading day
+3. Adj Close: The adjusted closing price amends a stock’s closing price to reflect that stock’s value after accounting for any corporate actions. Such as stock splits.
+4. High, the highest price of a trading day
+5. Low, the lowest price of a trading day
+6. Volume, trading volume
+I chose Exchange Traded Index Funds (ETF): Invsco QQQ’s pricing data as the input of model training. The Index includes the 100 largest non-financial companies listed on the Nasdaq based on market cap.” More information see: Inveso QQQ homepage
 
 ### The Blog Post of this project can be found via the following link
-https://lululastudio.com/stockpricepredictor/2021/12/28/stock-price-predictor-udacity-data-scientist-capstone-project
+https://medium.com/@qsong2610/use-lstm-to-predict-financial-asset-price-af751d2db3c4
 
 ### Libraries used in this project
 
@@ -30,9 +37,8 @@ yfinance documentation: https://pypi.org/project/yfinance/
 
 * a Jupiternotebook file which contians all the code
 * model.h5: trained model 
-* model_updated.h5: updated model after adding 50 more neurons
+* downloadedDataMulti.csv
 * downloaded_data.csv: the orignal dataset that I've downloaded via yfinance
-* final_prediction.csv: the final dataset that contians model prediction
 
 ### Sections in this project 
 
@@ -53,18 +59,15 @@ yfinance documentation: https://pypi.org/project/yfinance/
 
 
 #### LSTM model prediciton
+The R — Square score is 0.914 which is rather satisfactory. RMSE is 23.336 which is way smaller than the mean (243.92) of testing data. At this stage, I’m comfortable with the performance of the model.
+I also plotted the actual price and predicted price (see the plot below).The blue line: training data.The orange line is the actual price.The green line is the prediction that LSTM model made. In most of the time, our predicted price runs slightly higher than the actual price, since the half of 2020, the differences between actual price and predication is getting bigger.
 
-The following plot showed the trained model and its prediction. The blue line is training data, and prediction is in green line. The actual price that we used for validation is in color orange.  As we can see from the plot below, our model works reasonable fine. The predicted price followed actual price rather well, only slightly higher in most of the cases. The value of RMSE is : 16.0173.
-![performance of model](https://images.squarespace-cdn.com/content/v1/5c193daf2971144ee8c71ea6/163d4c52-74a4-42f7-b4a7-2ad0779c47ec/download+%284%29.png?format=2500w)
+
+![Model Predicition](https://miro.medium.com/max/1400/1*uHj9ToZOwMpLd4zWlesaww.png)
 
 
 #### ONCLUSION AND POSSIBLE IMPROVEMENTS
 
-THe model does reasonably well when predicting the financial instruments in the same asset class and sector, that is : tech stock (equity).  
-
-The model does not perform well when predicting the price of Bitcoin which is a in totally different asset class. In financial sector, there are many assets classes, such as Fixed Income( Bonds), Equity(stocks), Currency(Forex), Digital Assets.  Different asset classed exhibit different price movements patterns, due to the fact that prices of those assets are determined on different factors. If you are trading or invest in one particular financial instrument , it’s better to train the model consistently with the same asset class and re-train the model if you wish to predict the price of another instrument from different sector or assets class. 
-
-To summaries, the LTSM  along is just too simply to forecast stock price, and trader&investor should definitely not trade according to the predictions. Financial market is an extremely complicated system, forecasting price movements is as difficult as forecasting weather. There are many factors can introduce dramatic changes of stock price. Use one model to predict and generate single for trading or investment decision is rather dangerous. Sometimes, It’s better to combine the results of different models. For example, utilize NLP sentiment analysis to evaluate the market sentiment, if the market sentiment is bearish and LTSM prediction also shows price drop, then we short-selling the stock; if the market sentiment is bullish and LTSM prediction also shows price increase, then we long the stock. 
 
 
 REFERENCE
