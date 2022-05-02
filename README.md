@@ -26,6 +26,8 @@ https://medium.com/@qsong2610/use-lstm-to-predict-financial-asset-price-af751d2d
 * math 
 * sklearn
 * tensorflow 
+* plotly
+* cufflinks
 
 ### Data Source 
 
@@ -40,12 +42,9 @@ yfinance documentation: https://pypi.org/project/yfinance/
 * downloadedDataMulti.csv
 * downloaded_data.csv: the orignal dataset that I've downloaded via yfinance
 
-### Sections in this project 
+### Plot the data in Candle chart
 
-* DOWNLOAD AND CLEAN THE DATA
-* DATA EXPLORATION AND SIMPLE MOVING AVERAGE STRATEGY 
-* BUILD AND TRAIN  LONG SHORT-TERM MEMORY MODEL 
-* EVALUATE THE MODEL’S ROBUSTNESS AND  PREDICT OTHER  FINANCIAL ASSET PRICE
+![performance of Simple Moving Average Strategy](https://miro.medium.com/max/1400/1*4qhAmYQJWnRZ4lh2uAorJg.png)
 
 
 
@@ -54,7 +53,7 @@ yfinance documentation: https://pypi.org/project/yfinance/
 * Blue Line: the cumulative return of the defined time period ( A simple buy and hold strategy)
 * Orange Line: Simple Moving Average(SMA)strategy's return
 * As you can see below, Given almost the same annulized volatilities, SMA strategy outperformed the "buy and hold" benchmark.
-![performance of Simple Moving Average Strategy](https://images.squarespace-cdn.com/content/v1/5c193daf2971144ee8c71ea6/04db2290-2d18-4426-9200-89ba4355218a/download+%281%29.png?format=2500w)
+![performance of Simple Moving Average Strategy](https://miro.medium.com/max/1400/1*scbsDoqfjrIvHC2QPYx0NQ.png)
 
 
 
