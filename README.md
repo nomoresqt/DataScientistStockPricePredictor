@@ -65,8 +65,18 @@ I also plotted the actual price and predicted price (see the plot below).The blu
 ![Model Predicition](https://miro.medium.com/max/1400/1*uHj9ToZOwMpLd4zWlesaww.png)
 
 
+The model was trained with the price of Exchange Traded Fund that tracks the performance of 100 tech stocks of Nasdaq, it seems to predict other tech stock prices rather well. See the table below, predictions of Microsoft and Meta.inc are within reasonable ranges.
+However, the performance dropped dramatically when the model was used to predict the . The prediction of Hermes, AEX index and Bitcoin are significantly different from the actual prices (see the numbers in red). The model doesn’t perform well across other assets classes.
+
+
+![Model Predicition](https://miro.medium.com/max/1400/1*27nMiY-eDUczao825cjbkA.png)
+
+
+
 #### ONCLUSION AND POSSIBLE IMPROVEMENTS
 
+This model is not robust enough, we simply cannot use this model to predict price of stock in other sectors. But, we should not expect one size fits all. Financial institutions and financial market professional rarely make investment decisions based on one signal or a simple prediction, they rely on fine designed architectures and decision processes. To summaries, the LTSM along is just too simply to forecast stock price, and trader&investor should definitely not trade according to the predictions alone. Financial market is an extremely complicated system , forecasting price movements is as difficult as forecasting weather. There are many factors can introduce unexpected dramatic changes of stock prices.
+In reality, traders build models and trading strategy based on the classification of asset. If we want to incorporate this model in a realistic process, it’s better to build other models such as K-mean clustering and identify stocks that belongs to the same cluster, then apply prediction only within the cluster. Sometimes, It’s better to combine the results of different models. For example, utilize NLP sentiment analysis to evaluate the overall market sentiment, if the market sentiment is bearish and LTSM prediction also shows price drop, then we short-selling the stock; if the market sentiment is bullish and LTSM prediction also shows price increase, then we long the stock.
 
 
 REFERENCE
